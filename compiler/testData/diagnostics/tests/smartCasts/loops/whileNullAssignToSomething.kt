@@ -1,4 +1,4 @@
-fun main() {
+fun main(args: Array<String>) {
     var result: String? = null
     var i = 0
     while (result == null) {

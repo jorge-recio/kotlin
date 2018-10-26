@@ -18,7 +18,7 @@ val D.attr: B
     get() = B()
 
 
-fun main() {
+fun main(args: Array<String>) {
     val b =  D()
     b.attr {} // overload resolution ambiguity
 

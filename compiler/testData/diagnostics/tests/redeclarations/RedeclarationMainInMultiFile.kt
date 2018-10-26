@@ -1,5 +1,5 @@
 // FILE: a.kt
-fun main() {}
+fun main(args: Array<String>) {}
 
 // FILE: b.kt
-fun main() {}
+fun main(args: Array<String>) {}

@@ -2,7 +2,7 @@ fun <T> assertEquals(a: T, b: T) {
     if (a != b) throw AssertionError("$a != $b")
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val bytePos = 128.toByte() // Byte.MAX_VALUE + 1
     assertEquals(-128, bytePos.toInt()) // correct, wrapped to Byte.MIN_VALUE
 

@@ -20,7 +20,7 @@ class Test: ATest(), ITest {
         <!CANNOT_CHANGE_ACCESS_PRIVILEGE, SETTER_VISIBILITY_INCONSISTENT_WITH_PROPERTY_VISIBILITY!>internal<!> set(<!UNUSED_PARAMETER!>value<!>) {}
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val test = Test()
     <!INVISIBLE_SETTER!>test.prop<!> = 12
 

@@ -7,7 +7,7 @@ private fun <T> test(value: T, extf: String.(value: T)->Unit) {
     "".extf(value)
 }
 
-fun main() {
+fun main(args: Array<String>) {
     test(1, {value -> println(value)})
 }
 

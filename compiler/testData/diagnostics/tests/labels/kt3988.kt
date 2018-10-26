@@ -12,7 +12,7 @@ fun new(body: Comment.() -> Unit) = body
 
 fun new2(body: Comment2.() -> Unit) = body
 
-fun main() {
+fun main(args: Array<String>) {
     new {
         new2 {
             <!UNUSED_EXPRESSION!>this@new<!> //UNRESOLVED REFERENCE

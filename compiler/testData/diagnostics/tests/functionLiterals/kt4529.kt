@@ -4,7 +4,7 @@ class G {
     infix fun foo(bar: (Int) -> Int) = bar
 }
 
-fun main() {
+fun main(args: Array<String>) {
     use(
             G().foo {it + 11} // no error
     )

@@ -4,6 +4,6 @@ public class A {
 }
 
 // FILE: 1.kt
-fun main() {
+fun main(args: Array<String>) {
     A.main(arrayOf())
 }

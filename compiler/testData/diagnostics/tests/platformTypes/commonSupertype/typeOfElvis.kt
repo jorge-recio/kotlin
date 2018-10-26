@@ -12,7 +12,7 @@ import p.*
 
 fun foo(): J? = null
 
-fun main() {
+fun main(args: Array<String>) {
     val v = foo() ?: J.j()
     if (v != null) {
 

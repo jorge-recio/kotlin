@@ -3,7 +3,7 @@ class A {
     fun set(<!UNUSED_PARAMETER!>x<!>: Int, <!UNUSED_PARAMETER!>y<!>: Int) {} // no `operator` modifier
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val a = A()
     <!OPERATOR_MODIFIER_REQUIRED!>a[1]<!>++
     <!OPERATOR_MODIFIER_REQUIRED!>a[1]<!> += 3

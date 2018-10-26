@@ -5,7 +5,7 @@ fun foo(i: Int) = i
 
 fun bar(l: Long) = l
 
-fun main() {
+fun main(args: Array<String>) {
     val <!UNUSED_VARIABLE!>i<!> = <!INT_LITERAL_OUT_OF_RANGE!>111111111111111777777777777777<!>
 
     //todo add diagnostic text messages

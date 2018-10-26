@@ -12,7 +12,7 @@ public class Super {
 public class Sub: Super() {
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val x = Sub()
     x.foo = true
     x.bar = true

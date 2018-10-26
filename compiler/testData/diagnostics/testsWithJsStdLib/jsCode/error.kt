@@ -3,7 +3,7 @@ val code = """
     + );
 """
 
-fun main(): Unit {
+fun main(args: Array<String>): Unit {
     js("var<!JSCODE_ERROR!> =<!> 10;")
 
     js("""var<!JSCODE_ERROR!> =<!> 10;""")

@@ -20,6 +20,6 @@ class KotlinDerived2 : Derived() {
     override fun <V: Any> foo() {}
 }
 
-fun main() {
+fun main(args: Array<String>) {
     Derived().foo<String>()
 }

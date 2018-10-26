@@ -4,7 +4,7 @@ class Foo() {}
 
 fun Any?.equals1(<!UNUSED_PARAMETER!>other<!> : Any?) : Boolean = true
 
-fun main() {
+fun main(args: Array<String>) {
 
     val command : Foo? = null
 

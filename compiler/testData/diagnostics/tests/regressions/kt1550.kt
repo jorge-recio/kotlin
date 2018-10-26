@@ -2,7 +2,7 @@ package foo
 
 import java.util.*
 
-fun main()
+fun main(args : Array<String>)
 {
   val c = ArrayList<Int>()
   c.add(3)

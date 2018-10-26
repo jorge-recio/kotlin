@@ -1,5 +1,5 @@
 // !DIAGNOSTICS: -NOTHING_TO_INLINE
-fun main() {
+fun main(args: Array<String>) {
     test {
         <!RETURN_NOT_ALLOWED!>return<!>
     }

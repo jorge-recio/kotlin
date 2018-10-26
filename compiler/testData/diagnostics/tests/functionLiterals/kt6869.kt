@@ -1,4 +1,4 @@
-fun main() {
+fun main(args : Array<String>) {
     var list = listOf(1)
 
     val a: Int? = 2

@@ -6,7 +6,7 @@ package a
 
 class Pair<A, B>(val a: A, val b: B)
 
-fun main() {
+fun main(args : Array<String>) {
     val d : Long = 1
     val period : Int? = null
     if (period != null) Pair(d, checkSubtype<Int>(period<!UNNECESSARY_NOT_NULL_ASSERTION!>!!<!>)) else Pair(d, 1)

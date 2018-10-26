@@ -5,7 +5,7 @@ import java.util.ArrayList
 
 class ListOfLists<T>(public val x : ArrayList<ArrayList<T>>)
 
-fun main() {
+fun main(args : Array<String>) {
     val a : ArrayList<ArrayList<String>> = ArrayList()
     val b : ListOfLists<String> = ListOfLists(a)
     val c : ListOfLists<*> = b

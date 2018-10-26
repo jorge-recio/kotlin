@@ -1,5 +1,5 @@
 //FILE: foo.kt
-fun main() {
+fun main(args: Array<String>) {
     val c: Type
     <!NON_EXHAUSTIVE_WHEN!>when<!> (<!UNINITIALIZED_VARIABLE, UNUSED_EXPRESSION!>c<!>)  {
 

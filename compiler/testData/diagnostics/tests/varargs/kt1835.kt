@@ -5,7 +5,7 @@ public class JavaClass {
 }
 
 // FILE: kotlin.kt
-fun main() {
+fun main(args : Array<String>) {
     JavaClass().from()
     JavaClass().from("")
     JavaClass().from("", "")

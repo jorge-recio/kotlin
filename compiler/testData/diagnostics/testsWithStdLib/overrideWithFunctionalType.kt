@@ -12,6 +12,6 @@ interface Base {
     fun <V: Any> foo(compute: () -> V?)
 }
 
-fun main() {
+fun main(args: Array<String>) {
     Derived().foo<String> { "" }
 }

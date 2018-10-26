@@ -18,7 +18,7 @@ class B() {
     }
 }
 
-fun main() {
+fun main(args : Array<String>) {
     var c = B()
     c <!ASSIGNMENT_OPERATOR_SHOULD_RETURN_UNIT!>+=<!> B()
     c <!ASSIGNMENT_OPERATOR_SHOULD_RETURN_UNIT!>*=<!> B()

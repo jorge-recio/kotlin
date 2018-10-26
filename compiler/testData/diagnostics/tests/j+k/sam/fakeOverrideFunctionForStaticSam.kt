@@ -14,7 +14,7 @@ public class Observable<T> {
 }
 
 // FILE: 1.kt
-fun main() {
+fun main(args: Array<String>) {
     BehaviorSubject.create<String>(null)
     BehaviorSubject.create<Int> { }
 }
