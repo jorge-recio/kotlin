@@ -355,22 +355,27 @@ open class Kapt3IT : Kapt3BaseIT() {
 
     @Test
     fun testLocationMapping() {
-        fun String.modifyNumbers(fn: (Int) -> Int): String =
-            replace("\\d+".toRegex()) { fn(it.value.toInt()).toString() }
-
         val project = Project("locationMapping", directoryPrefix = "kapt2")
         val regex = "((Test\\.java)|(test\\.kt)):(\\d+): error: GenError element".toRegex()
 
         fun CompiledProject.getErrorMessages(): String =
-            regex.findAll(output)
-                .map { it.value }
-                .joinToString("\n") { if (isWindows) it.modifyNumbers { it + 1 } else it }
+            regex.findAll(output).map { it.value }.joinToString("\n")
+
+        fun genErrorString(line: Int) = "Test.java:$line: error: GenError element"
 
         project.build("build") {
             assertFailed()
 
-            val expected = arrayOf(9, 17).joinToString("\n") { "Test.java:$it: error: GenError element" }
-            Assert.assertEquals(expected, getErrorMessages())
+            val actual = getErrorMessages()
+
+            try {
+                val expected = arrayOf(9, 17).joinToString("\n", transform = ::genErrorString)
+                Assert.assertEquals(expected, actual)
+            } catch (e: AssertionError) {
+                // on windows errors sometimes reported starting from 0 line, but sometimes from 1
+                val expected = arrayOf(10, 18).joinToString("\n", transform = ::genErrorString)
+                Assert.assertEquals(expected, actual)
+            }
         }
 
         project.projectDir.getFileByName("build.gradle").modify {
